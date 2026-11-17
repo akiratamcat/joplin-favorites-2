@@ -1,4 +1,5 @@
 import { Settings } from "./settings";
+import { N_ } from "./i18n";
 
 /**
  * Favorite type definitions.
@@ -37,11 +38,11 @@ interface IFavoriteDesc {
  * Array of favorite descriptions. Order must match with FavoriteType enum.
  */
 const FavoriteDesc: IFavoriteDesc[] = [
-  { name: 'Notebook', icon: 'fa-book', dataType: 'folders', label: 'Full path' }, // Folder
-  { name: 'Note', icon: 'fa-file-alt', dataType: 'notes', label: 'Full path' }, // Note
-  { name: 'To-do', icon: 'fa-check-square', dataType: 'notes', label: 'Full path' }, // Todo
-  { name: 'Tag', icon: 'fa-tag', dataType: 'tags', label: 'Tag' }, // Tag
-  { name: 'Search', icon: 'fa-search', dataType: 'searches', label: 'Search query' } // Search
+  { name: N_('Notebook'), icon: 'fa-book', dataType: 'folders', label: N_('Full path') }, // Folder
+  { name: N_('Note'), icon: 'fa-file-alt', dataType: 'notes', label: N_('Full path') }, // Note
+  { name: N_('To-do'), icon: 'fa-check-square', dataType: 'notes', label: N_('Full path') }, // Todo
+  { name: N_('Tag'), icon: 'fa-tag', dataType: 'tags', label: N_('Tag') }, // Tag
+  { name: N_('Search'), icon: 'fa-search', dataType: 'searches', label: N_('Search query') } // Search
 ];
 
 /**

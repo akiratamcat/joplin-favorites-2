@@ -5,9 +5,12 @@ import { FavoriteType, IFavorite, Favorites } from './favorites';
 import { Settings } from './settings';
 import { Panel } from './panel';
 import { Dialog } from './dialog';
+import { initLocale, _ } from './i18n';
 
 joplin.plugins.register({
   onStart: async function () {
+    // load UI translations matching Joplin's language (must run before registering UI)
+    await initLocale();
     const CLIPBOARD = joplin.clipboard;
     const COMMANDS = joplin.commands;
     const DATA = joplin.data;
@@ -26,9 +29,9 @@ joplin.plugins.register({
     await addDialog.register();
     const editDialog = new Dialog('Edit');
     await editDialog.register([
-      { id: 'delete', title: 'Delete', },
-      { id: 'ok', title: 'OK' },
-      { id: 'cancel', title: 'Cancel' }
+      { id: 'delete', title: _('Delete'), },
+      { id: 'ok', title: _('OK') },
+      { id: 'cancel', title: _('Cancel') }
     ]);
 
     //#region HELPERS
@@ -40,7 +43,7 @@ joplin.plugins.register({
       try {
         await DATA.get([Favorites.getDesc(favorite).dataType, favorite.value], { fields: ['id'] });
       } catch (err) {
-        const result: number = await Dialog.showMessage(`Cannot open favorite. Seems that the target ${Favorites.getDesc(favorite).name.toLocaleLowerCase()} was deleted.\n\nDo you want to delete the favorite also?`);
+        const result: number = await Dialog.showMessage(_('Cannot open favorite. The target (%s) seems to have been deleted.\n\nDo you want to delete the favorite also?', _(Favorites.getDesc(favorite).name)));
         if (!result) {
           await favorites.delete(index);
           await panel.updateWebview();
@@ -76,7 +79,7 @@ joplin.plugins.register({
       if (index >= 0) {
 
         // if so... open editFavorite dialog
-        await COMMANDS.execute('favsEditFavorite', index);
+        await COMMANDS.execute('favs2i18nEditFavorite', index);
       } else {
 
         // otherwise create new favorite, with or without user interaction
@@ -103,10 +106,10 @@ joplin.plugins.register({
 
     //#region COMMANDS
 
-    // Command: favsOpenFavorite (INTERNAL)
+    // Command: favs2i18nOpenFavorite (INTERNAL)
     // Desc: Internal command to open a favorite
     await COMMANDS.register({
-      name: 'favsOpenFavorite',
+      name: 'favs2i18nOpenFavorite',
       execute: async (index: number) => {
         const favorite: IFavorite = favorites.get(index);
         if (!favorite) return;
@@ -150,10 +153,10 @@ joplin.plugins.register({
       }
     });
 
-    // Command: favsEditFavorite (INTERNAL)
+    // Command: favs2i18nEditFavorite (INTERNAL)
     // Desc: Internal command to edit a favorite
     await COMMANDS.register({
-      name: 'favsEditFavorite',
+      name: 'favs2i18nEditFavorite',
       execute: async (index: number) => {
         const favorite: IFavorite = favorites.get(index);
         if (!favorite) return;
@@ -173,11 +176,11 @@ joplin.plugins.register({
       }
     });
 
-    // Command: favsAddFolder
+    // Command: favs2i18nAddFolder
     // Desc: Add selected folder to favorites
     await COMMANDS.register({
-      name: 'favsAddFolder',
-      label: 'Add notebook to Favorites',
+      name: 'favs2i18nAddFolder',
+      label: _('Add notebook to Favorites'),
       iconName: 'fas fa-book',
       enabledCondition: 'oneFolderSelected',
       execute: async (folderId: string, targetIdx?: number) => {
@@ -195,11 +198,11 @@ joplin.plugins.register({
       }
     });
 
-    // Command: favsAddNote
+    // Command: favs2i18nAddNote
     // Desc: Add selected note to favorites
     await COMMANDS.register({
-      name: 'favsAddNote',
-      label: 'Add note to Favorites',
+      name: 'favs2i18nAddNote',
+      label: _('Add note to Favorites'),
       iconName: 'fas fa-sticky-note',
       enabledCondition: "someNotesSelected",
       execute: async (noteIds: string[], targetIdx?: number) => {
@@ -225,11 +228,11 @@ joplin.plugins.register({
       }
     });
 
-    // Command: favsAddTag
+    // Command: favs2i18nAddTag
     // Desc: Add tag to favorites
     await COMMANDS.register({
-      name: 'favsAddTag',
-      label: 'Add tag to Favorites',
+      name: 'favs2i18nAddTag',
+      label: _('Add tag to Favorites'),
       iconName: 'fas fa-tag',
       execute: async (tagId: string) => {
         if (tagId) {
@@ -241,26 +244,26 @@ joplin.plugins.register({
       }
     });
 
-    // Command: favsAddSearch
+    // Command: favs2i18nAddSearch
     // Desc: Add entered search query to favorites
     await COMMANDS.register({
-      name: 'favsAddSearch',
-      label: 'Add new search to Favorites',
+      name: 'favs2i18nAddSearch',
+      label: _('Add new search to Favorites'),
       iconName: 'fas fa-search',
       execute: async () => {
-        await addFavorite('', 'New Search', FavoriteType.Search, true); // always add with dialog
+        await addFavorite('', _('New Search'), FavoriteType.Search, true); // always add with dialog
       }
     });
 
-    // Command: favsClear
+    // Command: favs2i18nClear
     // Desc: Remove all favorites
     await COMMANDS.register({
-      name: 'favsClear',
-      label: 'Remove all Favorites',
+      name: 'favs2i18nClear',
+      label: _('Remove all Favorites'),
       iconName: 'fas fa-times',
       execute: async () => {
         // ask user before removing favorites
-        const result: number = await Dialog.showMessage('Do you really want to remove all Favorites?');
+        const result: number = await Dialog.showMessage(_('Do you really want to remove all Favorites?'));
         if (result) return;
 
         await settings.clearFavorites();
@@ -268,23 +271,23 @@ joplin.plugins.register({
       }
     });
 
-    // Command: favsToggleVisibility
+    // Command: favs2i18nToggleVisibility
     // Desc: Toggle panel visibility
     await COMMANDS.register({
-      name: 'favsToggleVisibility',
-      label: 'Toggle Favorites visibility',
+      name: 'favs2i18nToggleVisibility',
+      label: _('Toggle Favorites visibility'),
       iconName: 'fas fa-eye-slash',
       execute: async () => {
         await panel.toggleVisibility();
       }
     });
 
-    // Commands: favsJumpToFavorite1 through favsJumpToFavorite9
+    // Commands: favs2i18nJumpToFavorite1 through favs2i18nJumpToFavorite9
     // Desc: Quick jump to favorite items at positions 1-9
     for (let i = 1; i <= 9; i++) {
       await COMMANDS.register({
-        name: `favsJumpToFavorite${i}`,
-        label: `Jump to Favorite ${i}`,
+        name: `favs2i18nJumpToFavorite${i}`,
+        label: _('Jump to Favorite %s', i),
         iconName: 'fas fa-keyboard',
         execute: async () => {
           const index: number = i - 1; // Convert to 0-based index
@@ -292,7 +295,7 @@ joplin.plugins.register({
 
           // Only jump if favorite exists (works for all favorite types)
           if (favorite) {
-            await COMMANDS.execute('favsOpenFavorite', index);
+            await COMMANDS.execute('favs2i18nOpenFavorite', index);
           }
         }
       });
@@ -301,28 +304,28 @@ joplin.plugins.register({
     // prepare commands menu
     const baseMenuItems: MenuItem[] = [
       {
-        commandName: 'favsAddFolder',
-        label: 'Add active notebook'
+        commandName: 'favs2i18nAddFolder',
+        label: _('Add active notebook')
       },
       {
-        commandName: 'favsAddNote',
-        label: 'Add selected note(s)'
+        commandName: 'favs2i18nAddNote',
+        label: _('Add selected note(s)')
       },
       {
-        commandName: 'favsAddSearch',
-        label: 'Add new search'
+        commandName: 'favs2i18nAddSearch',
+        label: _('Add new search')
       },
       // {
       //   commandName: "favsAddActiveSearch",
       //   label: 'Add current active search'
       // },
       {
-        commandName: 'favsClear',
-        label: 'Remove all Favorites'
+        commandName: 'favs2i18nClear',
+        label: _('Remove all Favorites')
       },
       {
-        commandName: 'favsToggleVisibility',
-        label: 'Toggle panel visibility',
+        commandName: 'favs2i18nToggleVisibility',
+        label: _('Toggle panel visibility'),
         accelerator: 'CmdOrCtrl+Alt+F'
       }
     ];
@@ -331,26 +334,26 @@ joplin.plugins.register({
     const jumpMenuItems: MenuItem[] = [];
     for (let i = 1; i <= 9; i++) {
       jumpMenuItems.push({
-        commandName: `favsJumpToFavorite${i}`,
-        label: `Jump to Favorite ${i}`,
+        commandName: `favs2i18nJumpToFavorite${i}`,
+        label: _('Jump to Favorite %s', i),
         accelerator: `CmdOrCtrl+${i}`
       });
     }
 
     const commandsSubMenu: MenuItem[] = [...baseMenuItems, ...jumpMenuItems];
-    await joplin.views.menus.create('toolsFavorites', 'Favorites', commandsSubMenu, MenuItemLocation.Tools);
+    await joplin.views.menus.create('toolsFavorites', _('Favorites'), commandsSubMenu, MenuItemLocation.Tools);
 
     // add commands to folders context menu
-    await joplin.views.menuItems.create('foldersContextMenuAddFolder', 'favsAddFolder', MenuItemLocation.FolderContextMenu);
+    await joplin.views.menuItems.create('foldersContextMenuAddFolder', 'favs2i18nAddFolder', MenuItemLocation.FolderContextMenu);
 
     // add commands to tags context menu
-    await joplin.views.menuItems.create('tagsContextMenuAddNote', 'favsAddTag', MenuItemLocation.TagContextMenu);
+    await joplin.views.menuItems.create('tagsContextMenuAddNote', 'favs2i18nAddTag', MenuItemLocation.TagContextMenu);
 
     // add commands to notes context menu
-    await joplin.views.menuItems.create('notesContextMenuAddNote', 'favsAddNote', MenuItemLocation.NoteListContextMenu);
+    await joplin.views.menuItems.create('notesContextMenuAddNote', 'favs2i18nAddNote', MenuItemLocation.NoteListContextMenu);
 
     // add commands to editor context menu
-    await joplin.views.menuItems.create('editorContextMenuAddNote', 'favsAddNote', MenuItemLocation.EditorContextMenu);
+    await joplin.views.menuItems.create('editorContextMenuAddNote', 'favs2i18nAddNote', MenuItemLocation.EditorContextMenu);
 
     //#endregion
 

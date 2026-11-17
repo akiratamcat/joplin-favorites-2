@@ -1,0 +1,243 @@
+# Japanese translation for the Joplin plugin "Favorites 2 (i18n test)".
+# Machine-assisted translation (Claude). Not yet reviewed by a native speaker.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: joplin-plugin-akiratamcat-favorites-i18n 1.6.0\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/dialog.ts:62
+#, c-format
+msgid "Add %s Favorite"
+msgstr "お気に入りの%sを追加"
+
+#: src/dialog.ts:62
+#, c-format
+msgid "Edit %s Favorite"
+msgstr "お気に入りの%sを編集"
+
+#: src/dialog.ts:76
+msgid "Name"
+msgstr "名前"
+
+#: src/favorites.ts:41
+msgid "Notebook"
+msgstr "ノートブック"
+
+#: src/favorites.ts:41 src/favorites.ts:42 src/favorites.ts:43
+msgid "Full path"
+msgstr "フルパス"
+
+#: src/favorites.ts:42
+msgid "Note"
+msgstr "ノート"
+
+#: src/favorites.ts:43
+msgid "To-do"
+msgstr "ToDo"
+
+#: src/favorites.ts:44 src/favorites.ts:44
+msgid "Tag"
+msgstr "タグ"
+
+#: src/favorites.ts:45
+msgid "Search"
+msgstr "検索"
+
+#: src/favorites.ts:45
+msgid "Search query"
+msgstr "検索クエリ"
+
+#: src/index.ts:32 src/panel.ts:107
+msgid "Delete"
+msgstr "削除"
+
+#: src/index.ts:33
+msgid "OK"
+msgstr "OK"
+
+#: src/index.ts:34
+msgid "Cancel"
+msgstr "キャンセル"
+
+#: src/index.ts:46
+#, c-format
+msgid "Cannot open favorite. The target (%s) seems to have been deleted.\n\nDo you want to delete the favorite also?"
+msgstr "お気に入りを開けません。対象の%sは削除されたようです。\n\nこのお気に入りも削除しますか？"
+
+#: src/index.ts:183
+msgid "Add notebook to Favorites"
+msgstr "ノートブックをお気に入りに追加"
+
+#: src/index.ts:205
+msgid "Add note to Favorites"
+msgstr "ノートをお気に入りに追加"
+
+#: src/index.ts:235
+msgid "Add tag to Favorites"
+msgstr "タグをお気に入りに追加"
+
+#: src/index.ts:251
+msgid "Add new search to Favorites"
+msgstr "新しい検索をお気に入りに追加"
+
+#: src/index.ts:254
+msgid "New Search"
+msgstr "新しい検索"
+
+#: src/index.ts:262 src/index.ts:324
+msgid "Remove all Favorites"
+msgstr "お気に入りをすべて削除"
+
+#: src/index.ts:266
+msgid "Do you really want to remove all Favorites?"
+msgstr "お気に入りをすべて削除してもよろしいですか？"
+
+#: src/index.ts:278
+msgid "Toggle Favorites visibility"
+msgstr "お気に入りの表示/非表示を切り替え"
+
+#: src/index.ts:290 src/index.ts:338
+#, c-format
+msgid "Jump to Favorite %s"
+msgstr "お気に入り %s へジャンプ"
+
+#: src/index.ts:308
+msgid "Add active notebook"
+msgstr "選択中のノートブックを追加"
+
+#: src/index.ts:312
+msgid "Add selected note(s)"
+msgstr "選択中のノートを追加"
+
+#: src/index.ts:316
+msgid "Add new search"
+msgstr "新しい検索を追加"
+
+#: src/index.ts:328
+msgid "Toggle panel visibility"
+msgstr "パネルの表示/非表示を切り替え"
+
+#: src/index.ts:344 src/settings.ts:117 src/settings.ts:127
+msgid "Favorites"
+msgstr "お気に入り"
+
+#: src/panel.ts:54
+msgid "Loading panel..."
+msgstr "パネルを読み込み中..."
+
+#: src/panel.ts:69
+msgid "FAVORITES"
+msgstr "お気に入り"
+
+#: src/panel.ts:106
+msgid "Rename"
+msgstr "名前を変更"
+
+#: src/settings.ts:135
+msgid "Enable drag & drop of favorites"
+msgstr "お気に入りのドラッグ＆ドロップを有効にする"
+
+#: src/settings.ts:136
+msgid "If enabled, the position of favorites can be change via drag & drop."
+msgstr "有効にすると、ドラッグ＆ドロップでお気に入りの並び順を変更できます。"
+
+#: src/settings.ts:143
+msgid "Edit favorite before add"
+msgstr "追加する前にお気に入りを編集する"
+
+#: src/settings.ts:144
+msgid "Opens a dialog to edit the favorite before adding it. If disabled, the name can still be changed later."
+msgstr "お気に入りを追加する前に編集ダイアログを開きます。無効にした場合でも、名前は後から変更できます。"
+
+#: src/settings.ts:151
+msgid "Show favorites panel title"
+msgstr "お気に入りパネルのタイトルを表示する"
+
+#: src/settings.ts:152
+msgid "Display 'FAVORITES' title in front of the favorites."
+msgstr "お気に入りの先頭に「お気に入り」というタイトルを表示します。"
+
+#: src/settings.ts:159
+msgid "Show type icons for favorites"
+msgstr "お気に入りの種類アイコンを表示する"
+
+#: src/settings.ts:160
+msgid "Display icons before favorite titles representing the types (notebook, note, tag, etc.)."
+msgstr "お気に入りの名前の前に、種類（ノートブック、ノート、タグなど）を表すアイコンを表示します。"
+
+#: src/settings.ts:168
+msgid "Line height (px)"
+msgstr "行の高さ (px)"
+
+#: src/settings.ts:169
+msgid "Line height of the favorites panel."
+msgstr "お気に入りパネルの行の高さです。"
+
+#: src/settings.ts:176
+msgid "Minimum favorite width (px)"
+msgstr "お気に入りの最小幅 (px)"
+
+#: src/settings.ts:177
+msgid "Minimum width of one favorite in pixel."
+msgstr "お気に入り1件あたりの最小幅（ピクセル）です。"
+
+#: src/settings.ts:184
+msgid "Maximum favorite width (px)"
+msgstr "お気に入りの最大幅 (px)"
+
+#: src/settings.ts:185
+msgid "Maximum width of one favorite in pixel."
+msgstr "お気に入り1件あたりの最大幅（ピクセル）です。"
+
+#: src/settings.ts:195
+msgid "Font family"
+msgstr "フォント"
+
+#: src/settings.ts:196
+msgid "Font family used in the panel. Font families other than 'default' must be installed on the system. If the font is incorrect or empty, it might default to a generic sans-serif font. (default: App default)"
+msgstr "パネルで使用するフォントです。'default' 以外のフォントはシステムにインストールされている必要があります。フォント名が正しくないか空の場合は、一般的な sans-serif フォントになることがあります。（既定値: アプリの既定）"
+
+#: src/settings.ts:204
+msgid "Font size"
+msgstr "フォントサイズ"
+
+#: src/settings.ts:205
+msgid "Font size used in the panel. Values other than 'default' must be specified in valid CSS syntax, e.g. '13px'. (default: App default font size)"
+msgstr "パネルで使用するフォントサイズです。'default' 以外の値は、'13px' のように正しい CSS 構文で指定してください。（既定値: アプリの既定のフォントサイズ）"
+
+#: src/settings.ts:213
+msgid "Background color"
+msgstr "背景色"
+
+#: src/settings.ts:214
+msgid "Main background color of the panel. (default: Note list background color)"
+msgstr "パネルのメインの背景色です。（既定値: ノート一覧の背景色）"
+
+#: src/settings.ts:222
+msgid "Hover Background color"
+msgstr "ホバー時の背景色"
+
+#: src/settings.ts:223
+msgid "Background color used when hovering a favorite. (default: Note list hover color)"
+msgstr "お気に入りにマウスを重ねたときの背景色です。（既定値: ノート一覧のホバー色）"
+
+#: src/settings.ts:231
+msgid "Foreground color"
+msgstr "前景色"
+
+#: src/settings.ts:232
+msgid "Foreground color used for text and icons. (default: App faded color)"
+msgstr "文字とアイコンに使用する色です。（既定値: アプリの淡色）"
+
+#: src/settings.ts:240
+msgid "Divider color"
+msgstr "区切り線の色"
+
+#: src/settings.ts:241
+msgid "Color of the divider between the favorites. (default: App default border color)"
+msgstr "お気に入り同士の区切り線の色です。（既定値: アプリの既定の境界線の色）"

@@ -1,0 +1,243 @@
+# Spanish translation for the Joplin plugin "Favorites 2 (i18n test)".
+# Machine-assisted translation (Claude). Not yet reviewed by a native speaker.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: joplin-plugin-akiratamcat-favorites-i18n 1.6.0\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/dialog.ts:62
+#, c-format
+msgid "Add %s Favorite"
+msgstr "Añadir favorito: %s"
+
+#: src/dialog.ts:62
+#, c-format
+msgid "Edit %s Favorite"
+msgstr "Editar favorito: %s"
+
+#: src/dialog.ts:76
+msgid "Name"
+msgstr "Nombre"
+
+#: src/favorites.ts:41
+msgid "Notebook"
+msgstr "Libreta"
+
+#: src/favorites.ts:41 src/favorites.ts:42 src/favorites.ts:43
+msgid "Full path"
+msgstr "Ruta completa"
+
+#: src/favorites.ts:42
+msgid "Note"
+msgstr "Nota"
+
+#: src/favorites.ts:43
+msgid "To-do"
+msgstr "Tarea"
+
+#: src/favorites.ts:44 src/favorites.ts:44
+msgid "Tag"
+msgstr "Etiqueta"
+
+#: src/favorites.ts:45
+msgid "Search"
+msgstr "Búsqueda"
+
+#: src/favorites.ts:45
+msgid "Search query"
+msgstr "Consulta de búsqueda"
+
+#: src/index.ts:32 src/panel.ts:107
+msgid "Delete"
+msgstr "Eliminar"
+
+#: src/index.ts:33
+msgid "OK"
+msgstr "Aceptar"
+
+#: src/index.ts:34
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: src/index.ts:46
+#, c-format
+msgid "Cannot open favorite. The target (%s) seems to have been deleted.\n\nDo you want to delete the favorite also?"
+msgstr "No se puede abrir el favorito. Parece que el destino (%s) fue eliminado.\n\n¿Desea eliminar también el favorito?"
+
+#: src/index.ts:183
+msgid "Add notebook to Favorites"
+msgstr "Añadir libreta a Favoritos"
+
+#: src/index.ts:205
+msgid "Add note to Favorites"
+msgstr "Añadir nota a Favoritos"
+
+#: src/index.ts:235
+msgid "Add tag to Favorites"
+msgstr "Añadir etiqueta a Favoritos"
+
+#: src/index.ts:251
+msgid "Add new search to Favorites"
+msgstr "Añadir nueva búsqueda a Favoritos"
+
+#: src/index.ts:254
+msgid "New Search"
+msgstr "Nueva búsqueda"
+
+#: src/index.ts:262 src/index.ts:324
+msgid "Remove all Favorites"
+msgstr "Eliminar todos los favoritos"
+
+#: src/index.ts:266
+msgid "Do you really want to remove all Favorites?"
+msgstr "¿Realmente desea eliminar todos los favoritos?"
+
+#: src/index.ts:278
+msgid "Toggle Favorites visibility"
+msgstr "Mostrar/ocultar Favoritos"
+
+#: src/index.ts:290 src/index.ts:338
+#, c-format
+msgid "Jump to Favorite %s"
+msgstr "Ir al favorito %s"
+
+#: src/index.ts:308
+msgid "Add active notebook"
+msgstr "Añadir libreta activa"
+
+#: src/index.ts:312
+msgid "Add selected note(s)"
+msgstr "Añadir nota(s) seleccionada(s)"
+
+#: src/index.ts:316
+msgid "Add new search"
+msgstr "Añadir nueva búsqueda"
+
+#: src/index.ts:328
+msgid "Toggle panel visibility"
+msgstr "Mostrar/ocultar panel"
+
+#: src/index.ts:344 src/settings.ts:117 src/settings.ts:127
+msgid "Favorites"
+msgstr "Favoritos"
+
+#: src/panel.ts:54
+msgid "Loading panel..."
+msgstr "Cargando panel..."
+
+#: src/panel.ts:69
+msgid "FAVORITES"
+msgstr "FAVORITOS"
+
+#: src/panel.ts:106
+msgid "Rename"
+msgstr "Renombrar"
+
+#: src/settings.ts:135
+msgid "Enable drag & drop of favorites"
+msgstr "Habilitar arrastrar y soltar favoritos"
+
+#: src/settings.ts:136
+msgid "If enabled, the position of favorites can be change via drag & drop."
+msgstr "Si está habilitado, la posición de los favoritos puede cambiarse arrastrando y soltando."
+
+#: src/settings.ts:143
+msgid "Edit favorite before add"
+msgstr "Editar el favorito antes de añadirlo"
+
+#: src/settings.ts:144
+msgid "Opens a dialog to edit the favorite before adding it. If disabled, the name can still be changed later."
+msgstr "Abre un diálogo para editar el favorito antes de añadirlo. Si está deshabilitado, el nombre se puede cambiar más tarde."
+
+#: src/settings.ts:151
+msgid "Show favorites panel title"
+msgstr "Mostrar el título del panel de favoritos"
+
+#: src/settings.ts:152
+msgid "Display 'FAVORITES' title in front of the favorites."
+msgstr "Muestra el título «FAVORITOS» delante de los favoritos."
+
+#: src/settings.ts:159
+msgid "Show type icons for favorites"
+msgstr "Mostrar iconos de tipo en los favoritos"
+
+#: src/settings.ts:160
+msgid "Display icons before favorite titles representing the types (notebook, note, tag, etc.)."
+msgstr "Muestra iconos delante de los títulos de los favoritos que representan su tipo (libreta, nota, etiqueta, etc.)."
+
+#: src/settings.ts:168
+msgid "Line height (px)"
+msgstr "Altura de línea (px)"
+
+#: src/settings.ts:169
+msgid "Line height of the favorites panel."
+msgstr "Altura de línea del panel de favoritos."
+
+#: src/settings.ts:176
+msgid "Minimum favorite width (px)"
+msgstr "Ancho mínimo del favorito (px)"
+
+#: src/settings.ts:177
+msgid "Minimum width of one favorite in pixel."
+msgstr "Ancho mínimo de un favorito en píxeles."
+
+#: src/settings.ts:184
+msgid "Maximum favorite width (px)"
+msgstr "Ancho máximo del favorito (px)"
+
+#: src/settings.ts:185
+msgid "Maximum width of one favorite in pixel."
+msgstr "Ancho máximo de un favorito en píxeles."
+
+#: src/settings.ts:195
+msgid "Font family"
+msgstr "Fuente"
+
+#: src/settings.ts:196
+msgid "Font family used in the panel. Font families other than 'default' must be installed on the system. If the font is incorrect or empty, it might default to a generic sans-serif font. (default: App default)"
+msgstr "Fuente utilizada en el panel. Las fuentes distintas de 'default' deben estar instaladas en el sistema. Si la fuente es incorrecta o está vacía, puede usarse una fuente sans-serif genérica. (predeterminado: fuente de la aplicación)"
+
+#: src/settings.ts:204
+msgid "Font size"
+msgstr "Tamaño de fuente"
+
+#: src/settings.ts:205
+msgid "Font size used in the panel. Values other than 'default' must be specified in valid CSS syntax, e.g. '13px'. (default: App default font size)"
+msgstr "Tamaño de fuente utilizado en el panel. Los valores distintos de 'default' deben indicarse con sintaxis CSS válida, p. ej. '13px'. (predeterminado: tamaño de fuente de la aplicación)"
+
+#: src/settings.ts:213
+msgid "Background color"
+msgstr "Color de fondo"
+
+#: src/settings.ts:214
+msgid "Main background color of the panel. (default: Note list background color)"
+msgstr "Color de fondo principal del panel. (predeterminado: color de fondo de la lista de notas)"
+
+#: src/settings.ts:222
+msgid "Hover Background color"
+msgstr "Color de fondo al pasar el ratón"
+
+#: src/settings.ts:223
+msgid "Background color used when hovering a favorite. (default: Note list hover color)"
+msgstr "Color de fondo al pasar el ratón sobre un favorito. (predeterminado: color de resaltado de la lista de notas)"
+
+#: src/settings.ts:231
+msgid "Foreground color"
+msgstr "Color de primer plano"
+
+#: src/settings.ts:232
+msgid "Foreground color used for text and icons. (default: App faded color)"
+msgstr "Color usado para el texto y los iconos. (predeterminado: color atenuado de la aplicación)"
+
+#: src/settings.ts:240
+msgid "Divider color"
+msgstr "Color del separador"
+
+#: src/settings.ts:241
+msgid "Color of the divider between the favorites. (default: App default border color)"
+msgstr "Color del separador entre los favoritos. (predeterminado: color de borde de la aplicación)"

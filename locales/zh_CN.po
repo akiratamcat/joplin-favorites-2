@@ -1,0 +1,243 @@
+# Chinese (Simplified) translation for the Joplin plugin "Favorites 2 (i18n test)".
+# Machine-assisted translation (Claude). Not yet reviewed by a native speaker.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: joplin-plugin-akiratamcat-favorites-i18n 1.6.0\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/dialog.ts:62
+#, c-format
+msgid "Add %s Favorite"
+msgstr "添加%s收藏"
+
+#: src/dialog.ts:62
+#, c-format
+msgid "Edit %s Favorite"
+msgstr "编辑%s收藏"
+
+#: src/dialog.ts:76
+msgid "Name"
+msgstr "名称"
+
+#: src/favorites.ts:41
+msgid "Notebook"
+msgstr "笔记本"
+
+#: src/favorites.ts:41 src/favorites.ts:42 src/favorites.ts:43
+msgid "Full path"
+msgstr "完整路径"
+
+#: src/favorites.ts:42
+msgid "Note"
+msgstr "笔记"
+
+#: src/favorites.ts:43
+msgid "To-do"
+msgstr "待办事项"
+
+#: src/favorites.ts:44 src/favorites.ts:44
+msgid "Tag"
+msgstr "标签"
+
+#: src/favorites.ts:45
+msgid "Search"
+msgstr "搜索"
+
+#: src/favorites.ts:45
+msgid "Search query"
+msgstr "搜索查询"
+
+#: src/index.ts:32 src/panel.ts:107
+msgid "Delete"
+msgstr "删除"
+
+#: src/index.ts:33
+msgid "OK"
+msgstr "确定"
+
+#: src/index.ts:34
+msgid "Cancel"
+msgstr "取消"
+
+#: src/index.ts:46
+#, c-format
+msgid "Cannot open favorite. The target (%s) seems to have been deleted.\n\nDo you want to delete the favorite also?"
+msgstr "无法打开收藏。目标%s似乎已被删除。\n\n是否同时删除此收藏？"
+
+#: src/index.ts:183
+msgid "Add notebook to Favorites"
+msgstr "将笔记本添加到收藏"
+
+#: src/index.ts:205
+msgid "Add note to Favorites"
+msgstr "将笔记添加到收藏"
+
+#: src/index.ts:235
+msgid "Add tag to Favorites"
+msgstr "将标签添加到收藏"
+
+#: src/index.ts:251
+msgid "Add new search to Favorites"
+msgstr "将新搜索添加到收藏"
+
+#: src/index.ts:254
+msgid "New Search"
+msgstr "新搜索"
+
+#: src/index.ts:262 src/index.ts:324
+msgid "Remove all Favorites"
+msgstr "删除所有收藏"
+
+#: src/index.ts:266
+msgid "Do you really want to remove all Favorites?"
+msgstr "确定要删除所有收藏吗？"
+
+#: src/index.ts:278
+msgid "Toggle Favorites visibility"
+msgstr "切换收藏显示"
+
+#: src/index.ts:290 src/index.ts:338
+#, c-format
+msgid "Jump to Favorite %s"
+msgstr "跳转到收藏 %s"
+
+#: src/index.ts:308
+msgid "Add active notebook"
+msgstr "添加当前笔记本"
+
+#: src/index.ts:312
+msgid "Add selected note(s)"
+msgstr "添加所选笔记"
+
+#: src/index.ts:316
+msgid "Add new search"
+msgstr "添加新搜索"
+
+#: src/index.ts:328
+msgid "Toggle panel visibility"
+msgstr "切换面板显示"
+
+#: src/index.ts:344 src/settings.ts:117 src/settings.ts:127
+msgid "Favorites"
+msgstr "收藏"
+
+#: src/panel.ts:54
+msgid "Loading panel..."
+msgstr "正在加载面板..."
+
+#: src/panel.ts:69
+msgid "FAVORITES"
+msgstr "收藏"
+
+#: src/panel.ts:106
+msgid "Rename"
+msgstr "重命名"
+
+#: src/settings.ts:135
+msgid "Enable drag & drop of favorites"
+msgstr "启用收藏拖放"
+
+#: src/settings.ts:136
+msgid "If enabled, the position of favorites can be change via drag & drop."
+msgstr "启用后，可通过拖放调整收藏的位置。"
+
+#: src/settings.ts:143
+msgid "Edit favorite before add"
+msgstr "添加前编辑收藏"
+
+#: src/settings.ts:144
+msgid "Opens a dialog to edit the favorite before adding it. If disabled, the name can still be changed later."
+msgstr "添加收藏前打开编辑对话框。如果禁用，之后仍可更改名称。"
+
+#: src/settings.ts:151
+msgid "Show favorites panel title"
+msgstr "显示收藏面板标题"
+
+#: src/settings.ts:152
+msgid "Display 'FAVORITES' title in front of the favorites."
+msgstr "在收藏前显示“收藏”标题。"
+
+#: src/settings.ts:159
+msgid "Show type icons for favorites"
+msgstr "显示收藏类型图标"
+
+#: src/settings.ts:160
+msgid "Display icons before favorite titles representing the types (notebook, note, tag, etc.)."
+msgstr "在收藏标题前显示表示类型（笔记本、笔记、标签等）的图标。"
+
+#: src/settings.ts:168
+msgid "Line height (px)"
+msgstr "行高 (px)"
+
+#: src/settings.ts:169
+msgid "Line height of the favorites panel."
+msgstr "收藏面板的行高。"
+
+#: src/settings.ts:176
+msgid "Minimum favorite width (px)"
+msgstr "收藏最小宽度 (px)"
+
+#: src/settings.ts:177
+msgid "Minimum width of one favorite in pixel."
+msgstr "单个收藏的最小宽度（像素）。"
+
+#: src/settings.ts:184
+msgid "Maximum favorite width (px)"
+msgstr "收藏最大宽度 (px)"
+
+#: src/settings.ts:185
+msgid "Maximum width of one favorite in pixel."
+msgstr "单个收藏的最大宽度（像素）。"
+
+#: src/settings.ts:195
+msgid "Font family"
+msgstr "字体"
+
+#: src/settings.ts:196
+msgid "Font family used in the panel. Font families other than 'default' must be installed on the system. If the font is incorrect or empty, it might default to a generic sans-serif font. (default: App default)"
+msgstr "面板中使用的字体。'default' 以外的字体必须已安装在系统中。如果字体不正确或为空，可能会使用通用的 sans-serif 字体。（默认：应用默认）"
+
+#: src/settings.ts:204
+msgid "Font size"
+msgstr "字号"
+
+#: src/settings.ts:205
+msgid "Font size used in the panel. Values other than 'default' must be specified in valid CSS syntax, e.g. '13px'. (default: App default font size)"
+msgstr "面板中使用的字号。'default' 以外的值必须使用有效的 CSS 语法指定，例如 '13px'。（默认：应用默认字号）"
+
+#: src/settings.ts:213
+msgid "Background color"
+msgstr "背景颜色"
+
+#: src/settings.ts:214
+msgid "Main background color of the panel. (default: Note list background color)"
+msgstr "面板的主背景颜色。（默认：笔记列表背景颜色）"
+
+#: src/settings.ts:222
+msgid "Hover Background color"
+msgstr "悬停背景颜色"
+
+#: src/settings.ts:223
+msgid "Background color used when hovering a favorite. (default: Note list hover color)"
+msgstr "鼠标悬停在收藏上时的背景颜色。（默认：笔记列表悬停颜色）"
+
+#: src/settings.ts:231
+msgid "Foreground color"
+msgstr "前景颜色"
+
+#: src/settings.ts:232
+msgid "Foreground color used for text and icons. (default: App faded color)"
+msgstr "文字和图标使用的颜色。（默认：应用淡色）"
+
+#: src/settings.ts:240
+msgid "Divider color"
+msgstr "分隔线颜色"
+
+#: src/settings.ts:241
+msgid "Color of the divider between the favorites. (default: App default border color)"
+msgstr "收藏之间分隔线的颜色。（默认：应用默认边框颜色）"

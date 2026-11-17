@@ -1,6 +1,7 @@
 import joplin from 'api';
 import { Favorites } from './favorites';
 import { Settings } from './settings';
+import { _ } from './i18n';
 
 export class Panel {
   private _panel: any;
@@ -21,16 +22,16 @@ export class Panel {
     await joplin.views.panels.addScript(this._panel, './webview.js');
     await joplin.views.panels.onMessage(this._panel, async (message: any) => {
       if (message.name === 'favsAddFolder') {
-        await joplin.commands.execute('favsAddFolder', message.id, message.targetIdx);
+        await joplin.commands.execute('favs2i18nAddFolder', message.id, message.targetIdx);
       }
       if (message.name === 'favsAddNote') {
-        await joplin.commands.execute('favsAddNote', message.id, message.targetIdx);
+        await joplin.commands.execute('favs2i18nAddNote', message.id, message.targetIdx);
       }
       if (message.name === 'favsEdit') {
-        await joplin.commands.execute('favsEditFavorite', message.index);
+        await joplin.commands.execute('favs2i18nEditFavorite', message.index);
       }
       if (message.name === 'favsOpen') {
-        await joplin.commands.execute('favsOpenFavorite', message.index);
+        await joplin.commands.execute('favs2i18nOpenFavorite', message.index);
       }
       if (message.name === 'favsRename') {
         await this._favs.changeTitle(message.index, message.newTitle);
@@ -50,7 +51,7 @@ export class Panel {
     await joplin.views.panels.setHtml(this._panel, `
       <div id="container" style="background:${this._settings.background};font-family:${this._settings.fontFamily},sans-serif;font-size:${this._settings.fontSize};">
         <div id="favs-container">
-          <p style="padding-left:8px;">Loading panel...</p>
+          <p style="padding-left:8px;">${_('Loading panel...')}</p>
         </div>
       </div>
     `);
@@ -65,7 +66,7 @@ export class Panel {
       panelTitleHtml = `
         <div id="panel-title" draggable="false" style="height:${this._settings.lineHeight}px;">
           <span class="fas fa-star" style="color:${fg};"></span>
-          <span class="title" style="color:${fg};">FAVORITES</span>
+          <span class="title" style="color:${fg};">${_('FAVORITES')}</span>
         </div>
       `;
     }
@@ -85,7 +86,7 @@ export class Panel {
 
       let typeIconHtml: string = '';
       if (this._settings.showTypeIcons) {
-        typeIconHtml = `<span class="fas ${Favorites.getDesc(favorite).icon}" title="${Favorites.getDesc(favorite).name}" style="color:${fg};"></span>`;
+        typeIconHtml = `<span class="fas ${Favorites.getDesc(favorite).icon}" title="${_(Favorites.getDesc(favorite).name)}" style="color:${fg};"></span>`;
       }
 
       let dataId: string = '';
@@ -102,8 +103,8 @@ export class Panel {
             ${typeIconHtml}
             <input class="title" title="${favorite.title}" value="${favorite.title}" style="color:${fg};" readonly></input>
             <span class="controls" style="background:${hoverBg};">
-              <span class="rename fas fa-pen" title="Rename" style="color:${fg};"></span>
-              <span class="delete fas fa-trash" title="Delete" style="color:${fg};"></span>
+              <span class="rename fas fa-pen" title="${_('Rename')}" style="color:${fg};"></span>
+              <span class="delete fas fa-trash" title="${_('Delete')}" style="color:${fg};"></span>
             </span>
           </span>
         </div>

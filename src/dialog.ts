@@ -1,6 +1,7 @@
 import joplin from 'api';
 import { ButtonSpec, DialogResult } from 'api/types';
 import { Favorites, IFavorite, FavoriteType } from './favorites';
+import { _ } from './i18n';
 
 export class Dialog {
   private _dialog: any;
@@ -54,6 +55,14 @@ export class Dialog {
   }
 
   /**
+   * Translated dialog heading, e.g. 'Add Notebook Favorite'.
+   */
+  private getHeading(favorite: IFavorite): string {
+    const typeName: string = _(Favorites.getDesc(favorite).name);
+    return (this._title === 'Add') ? _('Add %s Favorite', typeName) : _('Edit %s Favorite', typeName);
+  }
+
+  /**
    * Prepare dialog html content.
    */
   private async prepareDialogHtml(favorite: IFavorite): Promise<string> {
@@ -62,11 +71,11 @@ export class Dialog {
 
     return `
       <div>
-        <h3><i class="fas ${Favorites.getDesc(favorite).icon}"></i>${this._title} ${Favorites.getDesc(favorite).name} Favorite</h3>
+        <h3><i class="fas ${Favorites.getDesc(favorite).icon}"></i>${this.getHeading(favorite)}</h3>
         <form name="inputForm">
-          <label for="title"><strong>Name</strong></label>
+          <label for="title"><strong>${_('Name')}</strong></label>
           <input type="text" id="title" name="title" value="${favorite.title}" tabindex="0" autofocus required>
-          <label for="value"><strong>${Favorites.getDesc(favorite).label}</strong></label>
+          <label for="value"><strong>${_(Favorites.getDesc(favorite).label)}</strong></label>
           <textarea id="value" name="value" rows="3" ${disabled} tabindex="0" required>${path}</textarea>
         </form>
       </div>

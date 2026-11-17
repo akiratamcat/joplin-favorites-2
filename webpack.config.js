@@ -172,6 +172,11 @@ const baseConfig = {
 				use: 'ts-loader',
 				exclude: /node_modules/,
 			},
+			{
+				// gettext catalogs are bundled as raw strings and parsed at runtime
+				test: /\.po$/,
+				type: 'asset/source',
+			},
 		],
 	},
 };

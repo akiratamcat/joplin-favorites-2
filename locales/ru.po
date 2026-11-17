@@ -1,0 +1,243 @@
+# Russian translation for the Joplin plugin "Favorites 2 (i18n test)".
+# Machine-assisted translation (Claude). Not yet reviewed by a native speaker.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: joplin-plugin-akiratamcat-favorites-i18n 1.6.0\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: src/dialog.ts:62
+#, c-format
+msgid "Add %s Favorite"
+msgstr "Добавить в избранное: %s"
+
+#: src/dialog.ts:62
+#, c-format
+msgid "Edit %s Favorite"
+msgstr "Изменить избранное: %s"
+
+#: src/dialog.ts:76
+msgid "Name"
+msgstr "Название"
+
+#: src/favorites.ts:41
+msgid "Notebook"
+msgstr "Блокнот"
+
+#: src/favorites.ts:41 src/favorites.ts:42 src/favorites.ts:43
+msgid "Full path"
+msgstr "Полный путь"
+
+#: src/favorites.ts:42
+msgid "Note"
+msgstr "Заметка"
+
+#: src/favorites.ts:43
+msgid "To-do"
+msgstr "Задача"
+
+#: src/favorites.ts:44 src/favorites.ts:44
+msgid "Tag"
+msgstr "Метка"
+
+#: src/favorites.ts:45
+msgid "Search"
+msgstr "Поиск"
+
+#: src/favorites.ts:45
+msgid "Search query"
+msgstr "Поисковый запрос"
+
+#: src/index.ts:32 src/panel.ts:107
+msgid "Delete"
+msgstr "Удалить"
+
+#: src/index.ts:33
+msgid "OK"
+msgstr "ОК"
+
+#: src/index.ts:34
+msgid "Cancel"
+msgstr "Отмена"
+
+#: src/index.ts:46
+#, c-format
+msgid "Cannot open favorite. The target (%s) seems to have been deleted.\n\nDo you want to delete the favorite also?"
+msgstr "Не удалось открыть избранное. Похоже, объект (%s) был удалён.\n\nУдалить также этот элемент избранного?"
+
+#: src/index.ts:183
+msgid "Add notebook to Favorites"
+msgstr "Добавить блокнот в избранное"
+
+#: src/index.ts:205
+msgid "Add note to Favorites"
+msgstr "Добавить заметку в избранное"
+
+#: src/index.ts:235
+msgid "Add tag to Favorites"
+msgstr "Добавить метку в избранное"
+
+#: src/index.ts:251
+msgid "Add new search to Favorites"
+msgstr "Добавить новый поиск в избранное"
+
+#: src/index.ts:254
+msgid "New Search"
+msgstr "Новый поиск"
+
+#: src/index.ts:262 src/index.ts:324
+msgid "Remove all Favorites"
+msgstr "Удалить всё избранное"
+
+#: src/index.ts:266
+msgid "Do you really want to remove all Favorites?"
+msgstr "Вы действительно хотите удалить всё избранное?"
+
+#: src/index.ts:278
+msgid "Toggle Favorites visibility"
+msgstr "Показать/скрыть избранное"
+
+#: src/index.ts:290 src/index.ts:338
+#, c-format
+msgid "Jump to Favorite %s"
+msgstr "Перейти к избранному %s"
+
+#: src/index.ts:308
+msgid "Add active notebook"
+msgstr "Добавить текущий блокнот"
+
+#: src/index.ts:312
+msgid "Add selected note(s)"
+msgstr "Добавить выбранные заметки"
+
+#: src/index.ts:316
+msgid "Add new search"
+msgstr "Добавить новый поиск"
+
+#: src/index.ts:328
+msgid "Toggle panel visibility"
+msgstr "Показать/скрыть панель"
+
+#: src/index.ts:344 src/settings.ts:117 src/settings.ts:127
+msgid "Favorites"
+msgstr "Избранное"
+
+#: src/panel.ts:54
+msgid "Loading panel..."
+msgstr "Загрузка панели..."
+
+#: src/panel.ts:69
+msgid "FAVORITES"
+msgstr "ИЗБРАННОЕ"
+
+#: src/panel.ts:106
+msgid "Rename"
+msgstr "Переименовать"
+
+#: src/settings.ts:135
+msgid "Enable drag & drop of favorites"
+msgstr "Включить перетаскивание избранного"
+
+#: src/settings.ts:136
+msgid "If enabled, the position of favorites can be change via drag & drop."
+msgstr "Если включено, порядок элементов избранного можно менять перетаскиванием."
+
+#: src/settings.ts:143
+msgid "Edit favorite before add"
+msgstr "Редактировать избранное перед добавлением"
+
+#: src/settings.ts:144
+msgid "Opens a dialog to edit the favorite before adding it. If disabled, the name can still be changed later."
+msgstr "Открывает диалог редактирования перед добавлением в избранное. Если выключено, название можно изменить позже."
+
+#: src/settings.ts:151
+msgid "Show favorites panel title"
+msgstr "Показывать заголовок панели избранного"
+
+#: src/settings.ts:152
+msgid "Display 'FAVORITES' title in front of the favorites."
+msgstr "Показывает заголовок «ИЗБРАННОЕ» перед элементами избранного."
+
+#: src/settings.ts:159
+msgid "Show type icons for favorites"
+msgstr "Показывать значки типов избранного"
+
+#: src/settings.ts:160
+msgid "Display icons before favorite titles representing the types (notebook, note, tag, etc.)."
+msgstr "Показывает перед названиями избранного значки, обозначающие тип (блокнот, заметка, метка и т. д.)."
+
+#: src/settings.ts:168
+msgid "Line height (px)"
+msgstr "Высота строки (px)"
+
+#: src/settings.ts:169
+msgid "Line height of the favorites panel."
+msgstr "Высота строки панели избранного."
+
+#: src/settings.ts:176
+msgid "Minimum favorite width (px)"
+msgstr "Минимальная ширина элемента (px)"
+
+#: src/settings.ts:177
+msgid "Minimum width of one favorite in pixel."
+msgstr "Минимальная ширина одного элемента избранного в пикселях."
+
+#: src/settings.ts:184
+msgid "Maximum favorite width (px)"
+msgstr "Максимальная ширина элемента (px)"
+
+#: src/settings.ts:185
+msgid "Maximum width of one favorite in pixel."
+msgstr "Максимальная ширина одного элемента избранного в пикселях."
+
+#: src/settings.ts:195
+msgid "Font family"
+msgstr "Шрифт"
+
+#: src/settings.ts:196
+msgid "Font family used in the panel. Font families other than 'default' must be installed on the system. If the font is incorrect or empty, it might default to a generic sans-serif font. (default: App default)"
+msgstr "Шрифт панели. Шрифты, отличные от 'default', должны быть установлены в системе. Если шрифт указан неверно или поле пустое, может использоваться стандартный шрифт sans-serif. (по умолчанию: шрифт приложения)"
+
+#: src/settings.ts:204
+msgid "Font size"
+msgstr "Размер шрифта"
+
+#: src/settings.ts:205
+msgid "Font size used in the panel. Values other than 'default' must be specified in valid CSS syntax, e.g. '13px'. (default: App default font size)"
+msgstr "Размер шрифта панели. Значения, отличные от 'default', нужно указывать в корректном синтаксисе CSS, например '13px'. (по умолчанию: размер шрифта приложения)"
+
+#: src/settings.ts:213
+msgid "Background color"
+msgstr "Цвет фона"
+
+#: src/settings.ts:214
+msgid "Main background color of the panel. (default: Note list background color)"
+msgstr "Основной цвет фона панели. (по умолчанию: цвет фона списка заметок)"
+
+#: src/settings.ts:222
+msgid "Hover Background color"
+msgstr "Цвет фона при наведении"
+
+#: src/settings.ts:223
+msgid "Background color used when hovering a favorite. (default: Note list hover color)"
+msgstr "Цвет фона при наведении на элемент избранного. (по умолчанию: цвет наведения списка заметок)"
+
+#: src/settings.ts:231
+msgid "Foreground color"
+msgstr "Цвет текста"
+
+#: src/settings.ts:232
+msgid "Foreground color used for text and icons. (default: App faded color)"
+msgstr "Цвет текста и значков. (по умолчанию: приглушённый цвет приложения)"
+
+#: src/settings.ts:240
+msgid "Divider color"
+msgstr "Цвет разделителя"
+
+#: src/settings.ts:241
+msgid "Color of the divider between the favorites. (default: App default border color)"
+msgstr "Цвет разделителя между элементами избранного. (по умолчанию: цвет границ приложения)"

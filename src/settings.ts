@@ -1,6 +1,7 @@
 import joplin from 'api';
 import { SettingItemType } from 'api/types';
 import { ChangeEvent } from 'api/JoplinSettings';
+import { _ } from './i18n';
 
 /**
  * Advanced style setting default values.
@@ -112,8 +113,8 @@ export class Settings {
    */
   async register() {
     // register settings in own section
-    await joplin.settings.registerSection('favorites.settings', {
-      label: 'Favorites',
+    await joplin.settings.registerSection('favorites2i18n.settings', {
+      label: _('Favorites'),
       iconName: 'fas fa-star'
     });
     await joplin.settings.registerSettings({
@@ -121,123 +122,123 @@ export class Settings {
       favorites: {
         value: [],
         type: SettingItemType.Array,
-        section: 'favorites.settings',
+        section: 'favorites2i18n.settings',
         public: false,
-        label: 'Favorites'
+        label: _('Favorites')
       },
       // general settings
       enableDragAndDrop: {
         value: this._enableDragAndDrop,
         type: SettingItemType.Bool,
-        section: 'favorites.settings',
+        section: 'favorites2i18n.settings',
         public: true,
-        label: 'Enable drag & drop of favorites',
-        description: 'If enabled, the position of favorites can be change via drag & drop.'
+        label: _('Enable drag & drop of favorites'),
+        description: _('If enabled, the position of favorites can be change via drag & drop.')
       },
       editBeforeAdd: {
         value: this._editBeforeAdd,
         type: SettingItemType.Bool,
-        section: 'favorites.settings',
+        section: 'favorites2i18n.settings',
         public: true,
-        label: 'Edit favorite before add',
-        description: 'Opens a dialog to edit the favorite before adding it. If disabled, the name can still be changed later.'
+        label: _('Edit favorite before add'),
+        description: _('Opens a dialog to edit the favorite before adding it. If disabled, the name can still be changed later.')
       },
       showPanelTitle: {
         value: this._showPanelTitle,
         type: SettingItemType.Bool,
-        section: 'favorites.settings',
+        section: 'favorites2i18n.settings',
         public: true,
-        label: 'Show favorites panel title',
-        description: "Display 'FAVORITES' title in front of the favorites."
+        label: _('Show favorites panel title'),
+        description: _('Display \'FAVORITES\' title in front of the favorites.')
       },
       showTypeIcons: {
         value: this._showTypeIcons,
         type: SettingItemType.Bool,
-        section: 'favorites.settings',
+        section: 'favorites2i18n.settings',
         public: true,
-        label: 'Show type icons for favorites',
-        description: 'Display icons before favorite titles representing the types (notebook, note, tag, etc.).'
+        label: _('Show type icons for favorites'),
+        description: _('Display icons before favorite titles representing the types (notebook, note, tag, etc.).')
       },
       lineHeight: {
         value: this._lineHeight,
         type: SettingItemType.Int,
-        section: 'favorites.settings',
+        section: 'favorites2i18n.settings',
         public: true,
         minimum: 20,
-        label: 'Line height (px)',
-        description: 'Line height of the favorites panel.'
+        label: _('Line height (px)'),
+        description: _('Line height of the favorites panel.')
       },
       minFavoriteWidth: {
         value: this._minFavoriteWidth,
         type: SettingItemType.Int,
-        section: 'favorites.settings',
+        section: 'favorites2i18n.settings',
         public: true,
-        label: 'Minimum favorite width (px)',
-        description: 'Minimum width of one favorite in pixel.'
+        label: _('Minimum favorite width (px)'),
+        description: _('Minimum width of one favorite in pixel.')
       },
       maxFavoriteWidth: {
         value: this._maxFavoriteWidth,
         type: SettingItemType.Int,
-        section: 'favorites.settings',
+        section: 'favorites2i18n.settings',
         public: true,
-        label: 'Maximum favorite width (px)',
-        description: 'Maximum width of one favorite in pixel.'
+        label: _('Maximum favorite width (px)'),
+        description: _('Maximum width of one favorite in pixel.')
       },
 
       // advanced settings
       fontFamily: {
         value: this._fontFamily,
         type: SettingItemType.String,
-        section: 'favorites.settings',
+        section: 'favorites2i18n.settings',
         public: true,
         advanced: true,
-        label: 'Font family',
-        description: "Font family used in the panel. Font families other than 'default' must be installed on the system. If the font is incorrect or empty, it might default to a generic sans-serif font. (default: App default)"
+        label: _('Font family'),
+        description: _('Font family used in the panel. Font families other than \'default\' must be installed on the system. If the font is incorrect or empty, it might default to a generic sans-serif font. (default: App default)')
       },
       fontSize: {
         value: this._fontSize,
         type: SettingItemType.String,
-        section: 'favorites.settings',
+        section: 'favorites2i18n.settings',
         public: true,
         advanced: true,
-        label: 'Font size',
-        description: "Font size used in the panel. Values other than 'default' must be specified in valid CSS syntax, e.g. '13px'. (default: App default font size)"
+        label: _('Font size'),
+        description: _('Font size used in the panel. Values other than \'default\' must be specified in valid CSS syntax, e.g. \'13px\'. (default: App default font size)')
       },
       mainBackground: {
         value: this._background,
         type: SettingItemType.String,
-        section: 'favorites.settings',
+        section: 'favorites2i18n.settings',
         public: true,
         advanced: true,
-        label: 'Background color',
-        description: 'Main background color of the panel. (default: Note list background color)'
+        label: _('Background color'),
+        description: _('Main background color of the panel. (default: Note list background color)')
       },
       hoverBackground: {
         value: this._hoverBackground,
         type: SettingItemType.String,
-        section: 'favorites.settings',
+        section: 'favorites2i18n.settings',
         public: true,
         advanced: true,
-        label: 'Hover Background color',
-        description: 'Background color used when hovering a favorite. (default: Note list hover color)'
+        label: _('Hover Background color'),
+        description: _('Background color used when hovering a favorite. (default: Note list hover color)')
       },
       mainForeground: {
         value: this._foreground,
         type: SettingItemType.String,
-        section: 'favorites.settings',
+        section: 'favorites2i18n.settings',
         public: true,
         advanced: true,
-        label: 'Foreground color',
-        description: 'Foreground color used for text and icons. (default: App faded color)'
+        label: _('Foreground color'),
+        description: _('Foreground color used for text and icons. (default: App faded color)')
       },
       dividerColor: {
         value: this._dividerColor,
         type: SettingItemType.String,
-        section: 'favorites.settings',
+        section: 'favorites2i18n.settings',
         public: true,
         advanced: true,
-        label: 'Divider color',
-        description: 'Color of the divider between the favorites. (default: App default border color)'
+        label: _('Divider color'),
+        description: _('Color of the divider between the favorites. (default: App default border color)')
       }
     });
     this._favs = await joplin.settings.value('favorites');
