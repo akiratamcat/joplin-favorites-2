@@ -1,21 +1,23 @@
 {
-  "name": "joplin-plugin-aronhack-favorites",
-  "version": "1.5.0",
-  "description": "Save any notebook, note, to-do, tag, or search as favorite in an extra panel view for quick access.",
-  "author": "Aron Wu",
-  "homepage": "https://github.com/ARON-HACK/joplin-favorites-2",
+  "name": "joplin-plugin-akiratamcat-favorites-i18n",
+  "version": "1.6.0",
+  "description": "Save any notebook, note, to-do, tag, or search as favorite in an extra panel view for quick access. Personal test build with UI translations (gettext PO).",
+  "author": "benji300, Aron Wu (ARON-HACK), akira tamcat",
+  "homepage": "https://github.com/akiratamcat/joplin-favorites-2",
   "bugs": {
-    "url": "https://github.com/ARON-HACK/joplin-favorites-2/issues"
+    "url": "https://github.com/akiratamcat/joplin-favorites-2/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ARON-HACK/joplin-favorites-2.git"
+    "url": "git+https://github.com/akiratamcat/joplin-favorites-2.git"
   },
   "scripts": {
     "dist": "webpack --env joplin-plugin-config=buildMain && webpack --env joplin-plugin-config=buildExtraScripts && webpack --env joplin-plugin-config=createArchive",
     "prepare": "npm run dist",
     "update": "npm install -g generator-joplin && yo joplin --node-package-manager npm --update --force",
-    "updateVersion": "webpack --env joplin-plugin-config=updateVersion"
+    "updateVersion": "webpack --env joplin-plugin-config=updateVersion",
+    "pot": "node scripts/extract-pot.js",
+    "i18n:check": "node scripts/extract-pot.js --check"
   },
   "license": "MIT",
   "keywords": [

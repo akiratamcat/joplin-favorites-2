@@ -1,6 +1,8 @@
-# Joplin Favorites
+# Joplin Favorites 2 (i18n test)
 
 > **Fork notice** — This is a maintained fork of [benji300/joplin-favorites](https://github.com/benji300/joplin-favorites) by [ARON-HACK](https://github.com/ARON-HACK). Original work © 2021 Benjamin Seifert, MIT licensed. See [License](#license).
+
+> **i18n test build** — This repository ([akiratamcat/joplin-favorites-2](https://github.com/akiratamcat/joplin-favorites-2)) is a *personal test fork* of the ARON-HACK fork that adds UI translations based on gettext PO files. It uses its own plugin ID (`com.akiratamcat.joplin.favorites2-i18n`), command IDs (`favs2i18n*`) and settings section, so it can be installed alongside the original plugin. Favorites saved with the original plugin are **not** carried over. This build is not affiliated with, nor submitted to, the upstream projects.
 
 Favorites is a plugin to extend the UX and UI of [Joplin's](https://joplinapp.org/) desktop application.
 
@@ -9,6 +11,8 @@ It allows to save any notebook, note, to-do, tag, or search as favorite in an ex
 > :warning: **CAUTION** - Requires Joplin **v2.1.5** or newer
 
 ## Features
+
+- UI translated into Japanese, Chinese (Simplified/Traditional), Korean, German, French, Spanish, Italian, Portuguese (Brazil) and Russian; follows Joplin's language setting automatically (see [Translations](#translations))
 
 - Save any of the following item types as favorites
   - Notebook
@@ -52,7 +56,7 @@ It allows to save any notebook, note, to-do, tag, or search as favorite in an ex
 
 ### Manual
 
-- Download the latest released JPL package (`*.jpl`) from [here](https://github.com/ARON-HACK/joplin-favorites-2/releases)
+- Download the latest released JPL package (`*.jpl`) from [here](https://github.com/akiratamcat/joplin-favorites-2/releases)
 - Open Joplin and navigate to `Tools > Options > Plugins`
 - Press `Install plugin` and select the previously downloaded `jpl` file
 - Confirm selection
@@ -148,21 +152,21 @@ This plugin provides additional commands as described in the following table.
 
 | Command Label                     | Command ID             | Description                            | Menu contexts                                                            |
 | --------------------------------- | ---------------------- | -------------------------------------- | ------------------------------------------------------------------------ |
-| Add notebook to Favorites         | `favsAddFolder`        | Add favorite for selected notebook     | `Tools>Favorites`, `FolderContext`, `Command palette`                    |
-| Add note to Favorites             | `favsAddNote`          | Add favorite for selected note(s)      | `Tools>Favorites`, `NoteListContext`, `EditorContext`, `Command palette` |
-| Add tag to Favorites              | `favsAddTag`           | Add favorite for selected tag          | `TagContext`                                                             |
-| Add search to Favorites           | `favsAddSearch`        | Add favorite with entered search query | `Tools>Favorites`, `Command palette`                                     |
-| Remove all Favorites              | `favsClear`            | Remove all favorites                   | `Tools>Favorites`, `Command palette`                                     |
-| Toggle Favorites panel visibility | `favsToggleVisibility` | Toggle panel visibility                | `Tools>Favorites`, `Command palette`                                     |
-| Jump to Favorite 1                | `favsJumpToFavorite1`  | Quick jump to first favorite           | `Tools>Favorites`, `Command palette`                                     |
-| Jump to Favorite 2                | `favsJumpToFavorite2`  | Quick jump to second favorite          | `Tools>Favorites`, `Command palette`                                     |
-| Jump to Favorite 3                | `favsJumpToFavorite3`  | Quick jump to third favorite           | `Tools>Favorites`, `Command palette`                                     |
-| Jump to Favorite 4                | `favsJumpToFavorite4`  | Quick jump to fourth favorite          | `Tools>Favorites`, `Command palette`                                     |
-| Jump to Favorite 5                | `favsJumpToFavorite5`  | Quick jump to fifth favorite           | `Tools>Favorites`, `Command palette`                                     |
-| Jump to Favorite 6                | `favsJumpToFavorite6`  | Quick jump to sixth favorite           | `Tools>Favorites`, `Command palette`                                     |
-| Jump to Favorite 7                | `favsJumpToFavorite7`  | Quick jump to seventh favorite         | `Tools>Favorites`, `Command palette`                                     |
-| Jump to Favorite 8                | `favsJumpToFavorite8`  | Quick jump to eighth favorite          | `Tools>Favorites`, `Command palette`                                     |
-| Jump to Favorite 9                | `favsJumpToFavorite9`  | Quick jump to ninth favorite           | `Tools>Favorites`, `Command palette`                                     |
+| Add notebook to Favorites         | `favs2i18nAddFolder`        | Add favorite for selected notebook     | `Tools>Favorites`, `FolderContext`, `Command palette`                    |
+| Add note to Favorites             | `favs2i18nAddNote`          | Add favorite for selected note(s)      | `Tools>Favorites`, `NoteListContext`, `EditorContext`, `Command palette` |
+| Add tag to Favorites              | `favs2i18nAddTag`           | Add favorite for selected tag          | `TagContext`                                                             |
+| Add search to Favorites           | `favs2i18nAddSearch`        | Add favorite with entered search query | `Tools>Favorites`, `Command palette`                                     |
+| Remove all Favorites              | `favs2i18nClear`            | Remove all favorites                   | `Tools>Favorites`, `Command palette`                                     |
+| Toggle Favorites panel visibility | `favs2i18nToggleVisibility` | Toggle panel visibility                | `Tools>Favorites`, `Command palette`                                     |
+| Jump to Favorite 1                | `favs2i18nJumpToFavorite1`  | Quick jump to first favorite           | `Tools>Favorites`, `Command palette`                                     |
+| Jump to Favorite 2                | `favs2i18nJumpToFavorite2`  | Quick jump to second favorite          | `Tools>Favorites`, `Command palette`                                     |
+| Jump to Favorite 3                | `favs2i18nJumpToFavorite3`  | Quick jump to third favorite           | `Tools>Favorites`, `Command palette`                                     |
+| Jump to Favorite 4                | `favs2i18nJumpToFavorite4`  | Quick jump to fourth favorite          | `Tools>Favorites`, `Command palette`                                     |
+| Jump to Favorite 5                | `favs2i18nJumpToFavorite5`  | Quick jump to fifth favorite           | `Tools>Favorites`, `Command palette`                                     |
+| Jump to Favorite 6                | `favs2i18nJumpToFavorite6`  | Quick jump to sixth favorite           | `Tools>Favorites`, `Command palette`                                     |
+| Jump to Favorite 7                | `favs2i18nJumpToFavorite7`  | Quick jump to seventh favorite         | `Tools>Favorites`, `Command palette`                                     |
+| Jump to Favorite 8                | `favs2i18nJumpToFavorite8`  | Quick jump to eighth favorite          | `Tools>Favorites`, `Command palette`                                     |
+| Jump to Favorite 9                | `favs2i18nJumpToFavorite9`  | Quick jump to ninth favorite           | `Tools>Favorites`, `Command palette`                                     |
 
 ### Keyboard shortcuts
 
@@ -179,6 +183,32 @@ The plugin provides 9 quick jump shortcuts to access your favorite items directl
 These shortcuts work for all favorite types (notebooks, notes, to-dos, tags, and searches). If no favorite exists at a particular position, the shortcut simply does nothing when pressed.
 
 The shortcuts are pre-configured and appear in `Tools > Options > Keyboard Shortcuts`, where you can customize them if desired.
+
+## Translations
+
+The UI language follows Joplin's own language setting (`Tools > Options > General > Language`). After changing Joplin's language, restart Joplin (Joplin asks for this anyway) and the plugin UI switches automatically. Unsupported languages fall back to English.
+
+| Language | Locale | File |
+| --- | --- | --- |
+| Japanese | `ja` | [locales/ja.po](./locales/ja.po) |
+| Chinese (Simplified) | `zh_CN` | [locales/zh_CN.po](./locales/zh_CN.po) |
+| Chinese (Traditional) | `zh_TW` (also used for `zh_HK`) | [locales/zh_TW.po](./locales/zh_TW.po) |
+| Korean | `ko` | [locales/ko.po](./locales/ko.po) |
+| German | `de` | [locales/de.po](./locales/de.po) |
+| French | `fr` | [locales/fr.po](./locales/fr.po) |
+| Spanish | `es` | [locales/es.po](./locales/es.po) |
+| Italian | `it` | [locales/it.po](./locales/it.po) |
+| Portuguese (Brazil) | `pt_BR` (also used for `pt_PT`) | [locales/pt_BR.po](./locales/pt_BR.po) |
+| Russian | `ru` | [locales/ru.po](./locales/ru.po) |
+
+> **NOTE** - The translations were machine-assisted and have not yet been reviewed by native speakers. Corrections are welcome.
+
+The PO files are bundled into the plugin at build time. To add or update a translation:
+
+1. Wrap new UI strings in `_('...')` (or `N_('...')` for strings translated later) from [src/i18n.ts](./src/i18n.ts).
+2. Run `npm run pot` to regenerate `locales/messages.pot`.
+3. Create or update `locales/<locale>.po` (e.g. with Poedit) and register a new file in `PO_SOURCES` in `src/i18n.ts`.
+4. Run `npm run i18n:check` to verify that every PO file covers all messages, then `npm run dist`.
 
 ## User options
 
@@ -204,7 +234,7 @@ Make sure to use conventional [commit messages](https://github.com/pvdlg/conven
 
 ## Development
 
-The npm package of the plugin can be found [here](https://www.npmjs.com/package/joplin-plugin-aronhack-favorites).
+This test build is not published to npm.
 
 ### Building the plugin
 
@@ -222,5 +252,6 @@ See [CHANGELOG](./CHANGELOG.md) for details.
 
 Copyright (c) 2021 Benjamin Seifert (original author)
 Copyright (c) 2026 Aron Wu (ARON-HACK fork)
+Copyright (c) 2026 akira tamcat (i18n test fork)
 
 MIT License. See [LICENSE](./LICENSE) for more information.

@@ -9,6 +9,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - None
 
+## [1.6.0] - 2026-11-17 (i18n test build)
+
+### Added
+
+- UI translation based on gettext PO files (`locales/*.po`), bundled at build time
+  - Japanese, Chinese (Simplified/Traditional), Korean, German, French, Spanish, Italian, Portuguese (Brazil), Russian
+  - The UI language follows Joplin's language setting automatically (falls back to English)
+- `npm run pot` (extract `locales/messages.pot`) and `npm run i18n:check` (verify PO files)
+
+### Changed
+
+- Rebranded as a personal test build: plugin ID `com.akiratamcat.joplin.favorites2-i18n`, name `Favorites 2 (i18n test)`, package `joplin-plugin-akiratamcat-favorites-i18n`
+- Command IDs renamed from `favs*` to `favs2i18n*` and settings section to `favorites2i18n.settings` to avoid conflicts with the original plugin
+- Author: benji300, Aron Wu (ARON-HACK), akira tamcat
+
 ## [1.5.0] - 2026-06-25
 
 ### Added
